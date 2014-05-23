@@ -37,9 +37,6 @@
 <?
 header('Content-Type: text/html; charset=utf-8');
 
-ini_set('display_errors',1);
-ini_set('display_startup_errors',1);
-error_reporting(-1);
 mysql_connect("localhost", "belyi05", "maman05") or die("Unable to connect to database server.");
 mysql_select_db("404") or die("Unable to select database.");
 
@@ -65,7 +62,7 @@ $res = mysql_query($sql);
 
 //$journal = array('name'=>array(), 'details'=>array());
 while ($row = mysql_fetch_assoc($res)) {
-    $journal[$row['name']][$row['semester']][] = array($row['subject'] => array ($row['marks']);
+    $journal[$row['name']][$row['semester']][] = array($row['subject'] => array ($row['marks']));
 
 }
 ?>
@@ -101,7 +98,7 @@ while ($row = mysql_fetch_assoc($res)) {
 
                 foreach ($marks as $k => $v) {
 
-                    echo '<td>' . $v . '</td>';
+                    echo '<td>' . implode('',$v) . '</td>';
 
                 }
             }
