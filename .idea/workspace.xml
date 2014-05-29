@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f10b6551-8baa-43f9-8256-09b555cdeccb" name="Default" comment="probation v0.2">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/probation/index.php" afterPath="$PROJECT_DIR$/probation/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/probation/404.sql" afterPath="$PROJECT_DIR$/probation/404.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="819d2250-6b4b-4f1e-a23c-84254cefcb2f" name="New changelist" comment="" />
@@ -314,7 +314,11 @@
       <created>1401372140887</created>
       <updated>1401372140887</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="probation v0.2">
+      <created>1401372358900</created>
+      <updated>1401372358900</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
