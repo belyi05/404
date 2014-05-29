@@ -9,7 +9,7 @@
       	</head>
 
 <body>
-<form id="addStudent" method="post" action="inserOne.php">
+<form id="addStudent" method="post" action="insertOne.php">
 	<input id="studentName" name="studentName" type="text" placeholder="Ваше имя" required >
 	<input id="studentSurname" name="studentSurname" type="text" placeholder="Ваша фамилия" required >
 	<input id="studentEmail" name="studentEmail" type="email" placeholder="Ваш email" required >
