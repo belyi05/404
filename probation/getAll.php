@@ -5,7 +5,7 @@ mysql_select_db("404") or die("Unable to select database.");
 mysql_set_charset('utf8');
 
 // количество выводимых пользователей в таблицу
-$limit_query = 1500;
+$limit_query = 15;
 //определение позиции для пагинации
 $pos = isset($_POST['pos']) ? mysql_real_escape_string(trim($_POST['pos'])) : '0';
 
