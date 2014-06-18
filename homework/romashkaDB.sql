@@ -3,6 +3,12 @@
 CREATE TABLE user
 (
   id serial(15),
+  role_id integer(15),
+  name character varying(50),
+  email character varying(50),
+  password character varying(50),
+  is_account_confirmed boolean,
+  is_account_banned boolean,
   CONSTRAINT user_pk PRIMARY KEY (id)
 ) WITH (
   OIDS=FALSE
@@ -11,12 +17,6 @@ CREATE TABLE user
 CREATE TABLE role
 (
   id serial(15),
-  role_id integer(15),
-  name character varying(50),
-  email character varying(50),
-  password character varying(50),
-  is_account_confirmed boolean,
-  is_account_banned boolean,
   name character varying(50),
   description text,
   is_admin boolean,
@@ -168,7 +168,7 @@ CREATE TABLE billing_operations
 );
 
 
-ALTER TABLE role ADD CONSTRAINT user_role_id__role_id FOREIGN KEY (role_id) REFERENCES role(id);
+ALTER TABLE user ADD CONSTRAINT user_role_id__role_id FOREIGN KEY (role_id) REFERENCES role(id);
 
 
 ALTER TABLE project ADD CONSTRAINT project_contractor_id__contractor_id FOREIGN KEY (contractor_id) REFERENCES contractor(id);
