@@ -75,6 +75,8 @@ CREATE TABLE billing_requests
   type_id smallint(1),
   description text,
   amount money(10),
+  account_from integer(15),
+  account_to integer(15),
   is_declined boolean,
   is_signed boolean,
   is_approved boolean,
@@ -177,7 +179,9 @@ ALTER TABLE project ADD CONSTRAINT project_manager_id__manager_id FOREIGN KEY (m
 
 ALTER TABLE project ADD CONSTRAINT project_status_id__status_id FOREIGN KEY (status_id) REFERENCES status(id);
 
+ALTER TABLE billing_requests ADD CONSTRAINT billing_requests_account_to__billing_accounts_id FOREIGN KEY (account_from) REFERENCES billing_accounts(id);
 
+ALTER TABLE billing_requests ADD CONSTRAINT billing_requests_account_to__billing_accounts_id FOREIGN KEY (account_to) REFERENCES billing_accounts(id);
 
 ALTER TABLE billing_requests ADD CONSTRAINT billing_requests_project_id__project_id FOREIGN KEY (project_id) REFERENCES project(id);
 
